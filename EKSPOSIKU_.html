@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="id"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Aplikasi Pengumpul Teks Eksposisi - Deteksi Struktur Otomatis</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h1>✍ Aplikasi Pengumpul Teks Eksposisi</h1> 
+        <p class="subtitle">Tulis teks eksposisi Anda. Struktur (tesis, argumentasi, penegasan ulang) akan terdeteksi otomatis berdasarkan pola teks.</p> 
+         
+        <div class="input-section"> 
+            <label for="expositionInput">Teks Eksposisi (Ketik di sini):</label> 
+            <textarea id="expositionInput" rows="10" cols="80" placeholder="Mulai mengetik teks eksposisi... Contoh: 'Pendidikan adalah kunci kemajuan. Karena... Oleh karena itu...'"></textarea> 
+            <div class="buttons"> 
+                <button id="analyzeBtn">🔍 Analisis Struktur Otomatis</button> 
+                <button id="saveBtn">💾 Simpan Teks</button> 
+                <button id="clearBtn">🗑 Bersihkan</button> 
+            </div> 
+        </div> 
+ 
+        <div class="output-section"> 
+            <h2>📊 Hasil Pengumpulan Struktur Otomatis</h2> 
+            <div id="structureOutput"> 
+                <p>Tekan "Analisis Struktur Otomatis" untuk mendeteksi tesis, argumentasi, dan penegasan ulang.</p> 
+            </div> 
+            <div id="savedExpositions"> 
+                <h3>📂 Teks yang Tersimpan</h3> 
+                <div id="expositionsList"></div> 
+            </div> 
+        </div> 
+    </div> 
+ 
+    <script src="script.js"></script> 
+</body> 
+</html>
+<!-- Di dalam <textarea> dan <button> --> 
+<textarea id="expositionInput" aria-label="Teks Eksposisi: Ketik tesis, argumentasi, dan penegasan ulang" aria-describedby="instructions" rows="10" cols="80"></textarea> 
+<button id="analyzeBtn" aria-label="Analisis Struktur Otomatis" aria-live="polite">🔍 Analisis Struktur Otomatis</button> 
+<div id="structureOutput" role="region" aria-labelledby="structure-heading"> 
+    <h2 id="structure-heading">Hasil Pengumpulan Struktur Otomatis</h2> 
+    <!-- Output teks --> 
+</div> 
